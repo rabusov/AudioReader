@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/label_list"
+    android:name="ru.rabus.audioreader.LabelListFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:layout_gravity="top|left|start"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:layoutMode="opticalBounds"
+    app:layoutManager="LinearLayoutManager"
+    tools:context="ru.rabus.audioreader.ItemDetailActivity"
+    tools:listitem="@layout/label_list_content">
+
+</android.support.v7.widget.RecyclerView>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AudioReader</string>
+    <string name="title_item_detail">Подробности</string>
+    <string name="add_audio_file">Добавить аудио файл</string>
+    <string name="AlReadyIsInDB">Запись о файле уже в базе данных</string>
+    <string name="play">Играть</string>
+    <string name="pause">Пауза</string>
+    <string name="delete">Удалить</string>
+    <string name="back">Назад</string>
+    <string name="forward">Вперёд</string>
+    <string name="deldialog_title">Удалить запись о файле</string>
+    <string name="deldialog_message">Будет удалена только ссылка на аудио запись, а не сам файл</string>
+    <string name="maybe">Возможно вы правы</string>
+    <string name="rightchoice">Вы сделали правильный выбор</string>
+    <string name="makenexttime">Сделаете выбор в следующий раз</string>
+    <string-array name="listofsec">
+        <item id="0">0.5 сек</item>
+        <item id="1">1 сек</item>
+        <item id="2">2 сек</item>
+        <item id="3">3 сек</item>
+        <item id="4">5 сек</item>
+        <item id="5">10 сек</item>
+        <item id="6">15 сек</item>
+        <item id="7">25 сек</item>
+        <item id="8">50 сек</item>
+    </string-array>
+    <string-array name="listofsec2">
+        <item id="0">0.5 сек</item>
+        <item id="1">1 сек</item>
+        <item id="2">2 сек</item>
+        <item id="3">4 сек</item>
+        <item id="4">8 сек</item>
+        <item id="5">16 сек</item>
+        <item id="6">32 сек</item>
+        <item id="7">64 сек</item>
+    </string-array>
+
+    <string name="delete_button_title_yes">Удалить ссылку!</string>
+    <string name="delete_button_title_no">Не удалять</string>
+    <string name="Browse">Посмотреть...|Найти</string>
+    <string name="Bookmarks">Закладки</string>
+    <string name="BookmarksList">Список закладок | добавить новую</string>
+    <string name="BookMarkAdd">Добавить закладку</string>
+    <string name="NameOfBookmark">Наименование закладки</string>
+    <string name="PositionInTime">Начало фрагмента</string>
+    <string name="Comment">Комментарий</string>
+    <string name="BookmarksListOnly">Список закладок</string>
+    <string name="delbookmark">Удаление закладки</string>
+    <string name="delbookmark_question">Вы хотите удалить закладку</string>
+</resources>

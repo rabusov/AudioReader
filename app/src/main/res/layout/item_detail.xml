@@ -1,0 +1,105 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:baselineAligned="false"
+        android:divider="?android:attr/dividerHorizontal"
+        android:orientation="vertical"
+        android:showDividers="none"
+        tools:context="ru.rabus.audioreader.ItemListActivity">
+        <!-- showDividers - отображение разделителя -->
+
+    <TextView
+        android:id="@+id/seekposition_text"
+        style="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginBottom="2dp"
+        />
+
+    <SeekBar
+        android:id="@+id/seekbar_audio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="@dimen/button_width_big"
+            android:layout_height="@dimen/button_width_big"
+            android:layout_weight="0"
+            android:background="@mipmap/bigplay_196"
+            android:contentDescription="@string/play"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+            android:id="@+id/button_delete"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="@dimen/button_width_sec"
+            android:layout_height="@dimen/button_width_sec"
+            android:layout_marginStart="@dimen/button_width_sec"
+            android:layout_weight="0"
+            android:background="@mipmap/delete_64"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:contentDescription="@string/delete" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_back_8"
+            android:layout_width="@dimen/button_width_sec"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@mipmap/back_96"
+            android:contentDescription="@string/back" />
+
+
+        <Spinner
+            android:id="@+id/spinner_sec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:entries="@array/listofsec2"
+            android:spinnerMode="dialog" />
+
+        <Button
+            android:id="@+id/button_forward_8"
+            android:layout_width="@dimen/button_width_sec"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@mipmap/forward_96"
+            android:contentDescription="@string/forward" />
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/bookmark_text"
+        style="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/White"
+        android:text="@string/BookmarksListOnly"
+        />
+    <include layout="@layout/label_list" />
+</LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ru.rabus.audioreader">
+
+    <!--  -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission-group.SYSTEM_TOOLS" />
+    <!--  -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <!-- GCM connects to Google Services. -->
+    <permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/audiobook_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/audiobook_icon_round_2"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ItemListActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.rabus.audioreader.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".BookmarkDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".ItemDetailActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan|stateAlwaysVisible"
+            >
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.rabus.audioreader.ItemDetailActivity" />
+        </activity>
+
+        <meta-data
+            android:name="AppID"
+            android:value="7" />
+
+<!--
+События о нажатии кнопок приходят не напрямую в MediaSession, а в виде бродкастов.
+Соответственно, нам надо еще подписаться на эти бродкасты и перебросить их в MediaSession.
+Для этого разработчики Android любезно предлагают нам воспользоваться готовым ресивером MediaButtonReceiver.
+Добавим его в манифест
+-->
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+<!--
+MediaButtonReceiver при получении события ищет в приложении сервис,
+который также принимает "android.intent.action.MEDIA_BUTTON" и перенаправляет его туда.
+Поэтому добавим аналогичный интент-фильтр в сервис.
+1 - сервис экспортируется, поскольку к нему будут подсоединяться снаружи.
+2 - добавлен интент-фильтр android.media.browse.MediaBrowserService.
+-->
+        <service
+            android:name=".ReadAndCopyFilesIntentService"
+            android:exported="true"
+            tools:ignore="ExportedService"
+            >
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

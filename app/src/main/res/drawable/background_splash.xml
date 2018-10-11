@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/White"/>
+
+    <item>
+        <bitmap
+            android:gravity="center|center_vertical"
+            android:src="@mipmap/audiobook_icon_round_2"/>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="bottom|center"
+            android:src="@mipmap/rabusovinfoservices"/>
+    </item>
+</layer-list>

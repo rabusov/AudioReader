@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AudioReader</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="add_audio_file">Add audiofile</string>
+    <string name="AlReadyIsInDB">Record about File already in the database</string>
+    <!-- -->
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="delete">Delete</string>
+<!-- -->
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <!-- -->
+    <string name="deldialog_title">Delete an audio recording</string>
+    <string name="deldialog_message">Only link to the audio recording will be removed and not the file itself</string>
+    <string name="maybe">Maybe you are right</string>
+    <string name="rightchoice">You made the right choice</string>
+    <string name="makenexttime">Make a choice next time</string>
+    <!-- -->
+    <string-array name="listofsec">
+        <item id="0">0.5 sec</item>
+        <item id="1">1 sec</item>
+        <item id="2">2 sec</item>
+        <item id="3">3 sec</item>
+        <item id="4">5 sec</item>
+        <item id="5">10 sec</item>
+        <item id="6">15 sec</item>
+        <item id="7">25 sec</item>
+        <item id="8">50 sec</item>
+    </string-array>
+    <string-array name="listofsec2">
+        <item id="0">0.5 sec</item>
+        <item id="1">1 sec</item>
+        <item id="2">2 sec</item>
+        <item id="3">4 sec</item>
+        <item id="4">8 sec</item>
+        <item id="5">16 sec</item>
+        <item id="6">32 sec</item>
+        <item id="7">64 sec</item>
+    </string-array>
+    <string name="delete_button_title_yes">Delete Link!</string>
+    <string name="delete_button_title_no">Do not delete</string>
+    <string name="Browse">Browse...</string>
+    <string name="Bookmarks">Bookmarks</string>
+    <string name="BookmarksList">List of Bookmarks | add new one</string>
+    <string name="BookMarkAdd">Add bookmark</string>
+    <string name="NameOfBookmark">Name of the bookmark</string>
+    <string name="PositionInTime">Beginning of the fragment</string>
+    <string name="Comment">Comment</string>
+    <string name="BookmarksListOnly">List of bookmarks</string>
+    <string name="delbookmark">Delete a Bookmark</string>
+    <string name="delbookmark_question">Do you want to delete the bookmark</string>
+</resources>
